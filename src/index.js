@@ -4,12 +4,8 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
-//app.get('/', (req, res) => {
-//  res.send('OK3');
-//});
-
-require('./controller/authController')(app);
-require('./controller/projectController')(app);
+require('./app/controller/authController')(app);
+require('./app/controller/projectController')(app);
 
 app.listen(3000);
 
