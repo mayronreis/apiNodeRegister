@@ -1,5 +1,6 @@
 const bcrypt = require('bcryptjs');
 const mongoose = require('../../database');
+const mailer = require('../../modules/mailer');
 
 const UserSchema = new mongoose.Schema({
   name: {
